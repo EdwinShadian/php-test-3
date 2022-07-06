@@ -9,8 +9,8 @@ class StatsTest extends TestCase
 {
     public function testToJson()
     {
-        $stats = new Stats('../access_log');
-        $example = file_get_contents('../example.json');
+        $stats = new Stats('../../access_log');
+        $example = file_get_contents('../../example.json');
         $this->assertJsonStringEqualsJsonString($example, $stats->toJson());
     }
 }
